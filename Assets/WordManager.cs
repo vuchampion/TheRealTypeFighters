@@ -5,7 +5,6 @@ using UnityEngine;
 public class WordManager : MonoBehaviour{
 
     public List<Word>  words;
-    public List<Word> words2;
     public WordSpawner wordSpawner;
     public int counter = 0;
 
