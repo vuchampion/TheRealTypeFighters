@@ -11,15 +11,21 @@ public class WordDisplay : MonoBehaviour
     public static string[] healingWords = { "armor-up", "dodge", "cure", "heal", "elixir", "intercept", "dodge", "cure", "heal", "elixir", "intercept" };
     public static string[] critWords = { "beatdown", "zero-in-on", "fatality", "ultimatum", "kNUckLe-SandWICh", "encroach", "shinku-hadouken", "uppercut", "FaLcoN-PuNcH", "zero-in-on", "fatality" };
     public static string[] freezeWords = { "neutralize", "blizzard", "frost", "icy", "pk-freeze", "ice-climber's", "exhaust", "neutralize", "blizzard", "frost", "icy" };
+   
+
 
 
     public void SetWord (string word)
 
   {
-     text.text = word;
-     //text.color = Color.white;
-     
-    for(int i = 0; i < 11; i++)
+       // RectTransform rt = GetComponent<RectTransform>();
+       // rt.rect.width = 300;
+        text.text = word;
+        text.fontSize = 20;
+        
+
+
+        for (int i = 0; i < 11; i++)
         {
             if(word == commonWords[i]) { text.color = Color.white; }
             if (word == healingWords[i]) { text.color = Color.green; }
@@ -41,6 +47,34 @@ public class WordDisplay : MonoBehaviour
 
   public void RemoveWord()
   {
-       Destroy(gameObject);
-  }
+        //text.text = word;
+        if (text.color == Color.green)
+        {
+            Destroy(gameObject);
+        }
+        /*
+        for (int i = 0; i < 11; i++)
+        {
+            if (word == critWords[i])
+            {
+
+                int randomNumber = Random.Range(0, 4);
+                if (randomNumber == 3)
+                {
+                    commonWordScore.scoreValue += 30;
+                }
+                else
+                {
+                    commonWordScore.scoreValue += 20;
+                }
+
+            }
+            else
+            {
+                commonWordScore.scoreValue += 10;
+            }
+        }
+ 
+    */
+   }
 }

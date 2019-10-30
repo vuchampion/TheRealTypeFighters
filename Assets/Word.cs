@@ -40,7 +40,8 @@ public class Word{
         if(wordTyped)
         {
             // Remove word on screen
-            display.RemoveWord(); 
+            display.RemoveWord();
+            
 
         }
         return wordTyped;

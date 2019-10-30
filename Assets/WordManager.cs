@@ -10,6 +10,7 @@ public class WordManager : MonoBehaviour{
 
 
       private bool hasActiveWord;
+    private bool gameActive = true;
       private Word activeWord;   // sotres the ActiveWord
 
 
@@ -68,8 +69,17 @@ public class WordManager : MonoBehaviour{
             {
                AddWord();
             }
-           
+            commonWordScore.scoreValue -= 10;
             Debug.Log("You have typed a word\n");
+
+
+            if(commonWordScore.scoreValue == 0)
+            {
+                Debug.Log("YOU WIN");
+                gameActive = false;
+                Debug.Log(gameActive);
+            }
+
           }
     }
 
