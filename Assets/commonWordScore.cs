@@ -22,4 +22,14 @@ public class commonWordScore : MonoBehaviour
         score.text = "Life: " + scoreValue;
         
     }
+
+    void addPoints()
+    {
+        scoreValue += 10;
+    }
+
+    void minusPoints()
+    {
+        scoreValue -= 10;
+    }
 }

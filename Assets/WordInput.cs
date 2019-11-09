@@ -6,14 +6,14 @@ public class WordInput : MonoBehaviour{
 
  public WordManager wordManager;
 
-    // Update is called onceper frame
+    // Update is called once per frame
     void Update()
     {
         foreach( char letter in Input.inputString)
         {
            wordManager.TypeLetter(letter);
            
-            //    Debug.Log(letter); // gets the input from keyboard and displays ti
+            //    Debug.Log(letter); // gets the input from keyboard and displays it
         }
 
     }
